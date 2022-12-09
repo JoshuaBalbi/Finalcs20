@@ -13,7 +13,7 @@ http.createServer(function (req,res) {
     if(req.url == "/favicon.ico"){
         console.log(req.url)
     }
-    else if (req.url == "/"){
+    else if (req.url == "/index.html"){
         fs.readFile("index.html",'utf8', function (error, html) {
         if (error) {
             throw error;
@@ -29,7 +29,7 @@ http.createServer(function (req,res) {
             res.end(html);
         });
     }
-    else if(req.url == "css/stylesheet.css"){
+    else if(req.url == "/css/stylesheet.css"){
         fs.readFile("stylesheet.css",'utf8', function (error, html) {
             if (error) {
                 throw error;
