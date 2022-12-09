@@ -8,6 +8,7 @@ client =new MongoClient(url,{ useUnifiedTopology: true ,useNewUrlParser: true});
 
 
 http.createServer(function (req,res) {
+    console.log(req.url)
     if(req.url == "/favicon.ico"){
         console.log(req.url)
 
