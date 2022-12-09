@@ -127,7 +127,7 @@
 </div>
 
 <div class="contact">
-  <form>
+  <form onsubmit = "clear()">
 
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
@@ -144,7 +144,7 @@
     <label for="subject">Order Inquiry</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-    <input type="button" value="Submit" onclick = "clear()"/>
+    <input type="submit" value="Submit"/>
 
   </form>
 </div>
