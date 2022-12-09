@@ -170,7 +170,7 @@ function out(error){
         "Party Size: " + document.getElementsByName('psize')[0].value + "\n" +
         "Time: " + document.getElementsByName('HOUR')[0].value + "\n" +
         "Setting: " + document.getElementsByName('setting')[i].value + "\n";
-    if(document.getElementsByName('triviaInRes')[0].style.display == 'block'){
+    if(document.getElementsByClassName('triviaInRes')[0].style.display == 'block'){
 	 s +=  "Trivia Reservation: " + document.getElementsByName('trivia')[0].value;
     }
     confirmation = window.confirm(s)
