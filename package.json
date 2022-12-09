@@ -4,9 +4,9 @@
   "description": "FinalProject",
   "main": "index.html",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joshua Balbi",
-  "license": "ISC",
-  "start": "node index.js"
+  "license": "ISC"
 }
