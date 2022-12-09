@@ -28,7 +28,7 @@
 
     function sayThankYou() {
       document.getElementsbyClassName('textbox')[0].value = ""; 
-      document.getElementsbyClassName('textbox')[0].value = ""; 
+      document.getElementsbyClassName('textbox')[1].value = ""; 
       let message = document.getElementsByClassName("thank")[0];
       message.style.display = "block";
     }
@@ -385,7 +385,7 @@ function clear(){
       <input class ="textbox" type="text" name="question" required><br>
       <label for="answer">Answer:</label><br>
       <input class ="textbox" type="text" name="answer" required><br><br>
-      <input class ="submitbutton" type="Button" value="Submit Suggestion" onclick = "sayThankYou()"/>
+      <input class ="submitbutton" type="button" value="Submit Suggestion" onclick = "sayThankYou()"/>
   </form>
 </div>
 
