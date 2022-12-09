@@ -70,7 +70,7 @@ http.createServer(function (req,res) {
         });
     }
     else if(req.url.substring(1, 7) == "images"){
-        fs.readFile(url.substring(8),'base64', function (error, html) {
+        fs.readFile(req.url.substring(8),'base64', function (error, html) {
             if (error) {
                 throw error;
             }
