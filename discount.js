@@ -70,12 +70,9 @@ http.createServer(function (req,res) {
         });
     }
     else if(req.url.substring(1, 7) == "images"){
-        fs.readFileSync(req.url.substring(1),'base64', function (error, html) {
-            if (error) {
-                throw error;
-            }
-            res.end(html);
-        });
+        var fileStream = fs.createReadStream(req.url.substring(1));
+        res.writeHead(200, {"Content-Type": "image/png"});
+        fileStream.pipe(res);
     }
     else if (req.url.substring(1,9) == "discount"){
         res.writeHead(200, {'Content-Type':'text/html'});
