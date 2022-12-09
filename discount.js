@@ -30,7 +30,7 @@ http.createServer(function (req,res) {
         });
     }
     else if(req.url == "/css/stylesheet.css"){
-        fs.readFile("stylesheet.css",'utf8', function (error, html) {
+        fs.readFile("css/stylesheet.css",'utf8', function (error, html) {
             if (error) {
                 throw error;
             }
