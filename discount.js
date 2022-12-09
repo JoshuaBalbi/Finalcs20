@@ -29,6 +29,13 @@ http.createServer(function (req,res) {
             res.end(html);
         });
     }
+    else if(req.url == "css/stylesheet.css"){
+        fs.readFile("stylesheet.css",'utf8', function (error, html) {
+            if (error) {
+                throw error;
+            }
+            res.end(html);
+        });
     else if(req.url == "/menu.html"){
         fs.readFile("menu.html",'utf8', function (error, html) {
             if (error) {
