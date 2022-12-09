@@ -21,6 +21,46 @@ http.createServer(function (req,res) {
          res.end(html);
      });
     }
+        else if(req.url == "/aboutus.html"){
+        fs.readFile("aboutus.html",'utf8', function (error, html) {
+            if (error) {
+                throw error;
+            }
+            res.end(html);
+        });
+    }
+    else if(req.url == "/menu.html"){
+        fs.readFile("menu.html",'utf8', function (error, html) {
+            if (error) {
+                throw error;
+            }
+            res.end(html);
+        });
+    }
+    else if(req.url == "/contact.html"){
+        fs.readFile("contact.html",'utf8', function (error, html) {
+            if (error) {
+                throw error;
+            }
+            res.end(html);
+        });
+    }
+    else if(req.url == "/order.html"){
+        fs.readFile("order.html",'utf8', function (error, html) {
+            if (error) {
+                throw error;
+            }
+            res.end(html);
+        });
+    }
+    else if(req.url == "/reservation.html"){
+        fs.readFile("reservation.html",'utf8', function (error, html) {
+            if (error) {
+                throw error;
+            }
+            res.end(html);
+        });
+    }
     else if (req.url[1] == "?"){
         res.writeHead(200, {'Content-Type':'text/html'});
         u = adr.parse(req.url,true);
