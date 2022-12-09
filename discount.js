@@ -77,7 +77,7 @@ http.createServer(function (req,res) {
             res.end(html);
         });
     }
-    else if (req.url[1] == "?"){
+    else if (req.url == "/discount"){
         res.writeHead(200, {'Content-Type':'text/html'});
         u = adr.parse(req.url,true);
         console.log(u)
