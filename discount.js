@@ -8,8 +8,14 @@ client =new MongoClient(url,{ useUnifiedTopology: true ,useNewUrlParser: true});
 
 
 http.createServer(function (req,res) {
-    if(req.url == "/favicon.ico"){
-        console.log(req.url)
+    if(req.url == "/"){
+        fs.readFile("index.html",'utf8', function (error, html) {
+        if (error) {
+            throw error;
+        }
+         res.end(html);
+     });
+
     }
     else if (req.url[1] == "?"){
         res.writeHead(200, {'Content-Type':'text/html'});
