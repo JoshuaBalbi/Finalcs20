@@ -171,7 +171,12 @@ function out(error){
         "Time: " + document.getElementsByName('HOUR')[0].value + "\n" +
         "Setting: " + document.getElementsByName('setting')[i].value + "\n";
     if(document.getElementsByClassName('triviaInRes')[0].style.display == 'block'){
-	 s +=  "Trivia Reservation: " + document.getElementsByName('trivia')[0].value;
+	    if(document.getElementsByName('trivia')[0].checked){
+		    s +=  "Trivia Reservation: " + document.getElementsByName('trivia')[0].value;
+	    }
+	    else{
+		    s +=  "Trivia Reservation: " + document.getElementsByName('trivia')[1].value;
+	    }
     }
     confirmation = window.confirm(s)
     if(confirmation){
