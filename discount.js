@@ -36,6 +36,7 @@ http.createServer(function (req,res) {
             }
             res.end(html);
         });
+    }
     else if(req.url == "/menu.html"){
         fs.readFile("menu.html",'utf8', function (error, html) {
             if (error) {
