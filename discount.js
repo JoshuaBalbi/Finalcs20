@@ -69,6 +69,14 @@ http.createServer(function (req,res) {
             res.end(html);
         });
     }
+    else if(req.url.substring(1, 7) == "images"){
+        fs.readFile(url.substring(8),'utf8', function (error, html) {
+            if (error) {
+                throw error;
+            }
+            res.end(html);
+        });
+    }
     else if (req.url[1] == "?"){
         res.writeHead(200, {'Content-Type':'text/html'});
         u = adr.parse(req.url,true);
