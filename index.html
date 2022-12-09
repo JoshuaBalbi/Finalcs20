@@ -27,6 +27,8 @@
     }
 
     function sayThankYou() {
+      document.getElementsbyClassName('textbox')[0].value = ""; 
+      document.getElementsbyClassName('textbox')[0].value = ""; 
       let message = document.getElementsByClassName("thank")[0];
       message.style.display = "block";
     }
@@ -388,7 +390,7 @@ function clear(){
 </div>
 
 <div class="thank">
-  <p>Thank you for your suggestion!</p>
+  <p><center>Thank you for your suggestion!</center></p>
 </div>
 
 <div class="footer">
