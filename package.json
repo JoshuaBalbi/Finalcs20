@@ -2,7 +2,7 @@
   "name": "finalproject",
   "version": "1.0.0",
   "description": "FinalProject",
-  "main": "node discount.js",
+  "main": "discount.js",
   "scripts": {
     "start": "index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
