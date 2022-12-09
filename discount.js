@@ -13,7 +13,7 @@ http.createServer(function (req,res) {
     if(req.url == "/favicon.ico"){
         console.log(req.url)
     }
-    else if (req.url == "/index.html"){
+    else if (req.url == "/" || req.url == "/index.html"){
         fs.readFile("index.html",'utf8', function (error, html) {
         if (error) {
             throw error;
