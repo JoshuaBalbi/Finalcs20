@@ -4,6 +4,7 @@ const fs = require("fs");
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://jbalbi01:Jumbo328@atlascluster.gqfxm25.mongodb.net/retryWrites=true&w=majority";
 client =new MongoClient(url,{ useUnifiedTopology: true ,useNewUrlParser: true});
+var port = process.env.PORT || 3002
 
 
 
@@ -39,7 +40,7 @@ http.createServer(function (req,res) {
         res.write ("Unknown page request");
         res.end();
     }
-    }).listen(8080)
+    }).listen(port)
 
 async function insertdiscount(fname,lname,num,res)
 {
