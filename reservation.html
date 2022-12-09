@@ -169,8 +169,10 @@ function out(error){
         "Name: " + document.getElementsByName('fname')[0].value + " " + document.getElementsByName('lname')[0].value + "\n" +
         "Party Size: " + document.getElementsByName('psize')[0].value + "\n" +
         "Time: " + document.getElementsByName('HOUR')[0].value + "\n" +
-        "Setting: " + document.getElementsByName('setting')[i].value + "\n" +
-        "Trivia Reservation: " + document.getElementsByName('trivia')[j].value
+        "Setting: " + document.getElementsByName('setting')[i].value + "\n";
+    if(document.getElementsByName('triviaInRes')[0].style.display == 'block'){
+	 s +=  "Trivia Reservation: " + document.getElementsByName('trivia')[0].value;
+    }
     confirmation = window.confirm(s)
     if(confirmation){
         window.alert(error)
