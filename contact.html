@@ -19,6 +19,16 @@
                 dropdownShown = false;
             }
       }
+    
+      function clear(){
+         alert("We will get back to you soon!")
+         getElementbyID('fname').value = "";
+         getElementbyID('lname').value = "";
+         getElementbyID('phone').value = "";
+         getElementbyID('email').value = "";
+         getElementbyID('subject').value = "";
+      }
+    
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,7 +126,7 @@
 </div>
 
 <div class="contact">
-  <form action="submit.html">
+  <form>
 
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -133,10 +143,12 @@
     <label for="subject">Order Inquiry</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-    <input type="button" value="Submit">
+    <input type="button" value="Submit" onclick = "clear()">
 
   </form>
 </div>
+  
+ 
 
 
 
