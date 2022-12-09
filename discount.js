@@ -53,7 +53,7 @@ http.createServer(function (req,res) {
             res.end(html);
         });
     }
-    else if(req.url == "/order.html"){
+    else if(req.url.substring(0,11) == "/order.html"){
         fs.readFile("order.html",'utf8', function (error, html) {
             if (error) {
                 throw error;
