@@ -2,9 +2,9 @@
   "name": "finalproject",
   "version": "1.0.0",
   "description": "FinalProject",
-  "main": "discount.js",
+  "main": "index.html",
   "scripts": {
-    "start": "index.html",
+    "start": "node discount.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joshua Balbi",
